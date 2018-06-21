@@ -69,6 +69,12 @@ ul li
 		text-align:center; 	
 		padding:160px 100px;
 	}
+	.Wrapper > a:hover{
+		color:rgba(0,255,255);
+		font-size:1.10rem;
+		border-color:rgba(0,255,255);
+		transition:0.4s;
+	}
 .read
 	{
 		position:relative;
