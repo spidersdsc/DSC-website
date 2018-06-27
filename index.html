@@ -4,40 +4,95 @@
 		<title> Spiders - DSC </title>
 		<link rel="icon" type="image/png" href=".\resources\png\logo.png">
 		<link rel="stylesheet" type="text/css" href=".\resources\Style\style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Added for experiment purpose-->
+		<!--starts here-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+	
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (1500) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1500, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>			
+<!--ends here-->
 	</head>
-	<body>
+	<body onload="document.getElementById('ttn').style.display = 'none';">
 		<div class="container">
-			<h1>Hi, We are Spiders </h1>
-			<h4>Developers Student Club</h4>
+			<h1>Hi, We are <span class="bright">Spiders</span> </h1>
+			<h4><span class="bright">D</span>evelopers <span class="bright">S</span>tudent <span class="bright">C</span>lub</h4>
 			<h6>Design & Build Web Applications</h6>
-			<a href="#1" ><img class="arrow"  src=".\resources\png\arrow.png" /></a>
+			<a href="#141" ><img class="arrow"  src=".\resources\png\arrow.png" /></a>
 		</div>
+		<div id="141"></div>
 		<div class="header" id="1">
 			<a href="#" title="Developers Student Club">
-				<img class="logo" src=".\resources\png\full_logo.png" />
+				<img class="logo" id="logo" src=".\resources\png\full_logo.png" />
 			</a>
-			<ul class="nested">
-				<li><a href="#">About US</a></li>
-				<li><a href="#">Vision</a></li>
-				<li><a href="#">Projects</a></li>
-				<li><a href="#">Features</a></li>
-				<li><a href="#">Interact</a></li>
-				<li><a href="#">Register</a></li>	
-				<li><a href="#">Events</a></li>
+			<div class="nav-btn">
+				<span class="out"><a href="#1" class="nb" onclick="myFunction1()">&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+			</div>
+			<ul class="nested" id="nst">
+				<li><a href="#567" onclick="myFunction();">About US</a></li>
+				<li><a href="#rfg"  onclick="myFunction2('fgt1','tt1');">Vision</a></li>
+				<li><a href="#rfg1" onclick="myFunction2('fgt2','tt2');">Projects</a></li>
+				<li><a href="#4">Features</a></li>
+				<li><a href="#5">Interact</a></li>
+				<li><a href="#5">Register</a></li>	
+				<li><a href="#6">Events</a></li>
 			</ul>
 		</div>
-		<div class="Wrapper">
-		<a class="read" href="#">Read more</a>
-		</div>		
-		<div>
-		<h1>Establishment</h1>
-		<p>The club has been established with the approval 
-		of the director Dr.G.S.Tomar on 10th of May 2018.</p> 
+		<div class="Wrapper" id="11">
+		<a class="read" href="#567"  onclick="myFunction()">Read more</a>
 		</div>
-		<div>
-			<h1> Problems  </h1>
-			<h3> ( How we got the idea of Starting Club)</h3>
-			<ol>
+		<div id="567" class="temp"></div>
+		<div id="demo" class="hide" >
+		<div class="readdd">
+		<h4><span class="bright">D</span>evelopers <span class="bright">S</span>tudent <span class="bright">C</span>lub</h4>
+			<p>There is no denying the immense importance of student clubs in any engineering college. They complement the college with their own unique and specific purpose. Hence, we strongly feel the need of one such club in our college. We established a Developer Student Club which basically aims to serve as a platform for our skilled developers to bring forward their skills and ideas and use them for the betterment of our college by developing specific products for the ease of access and simplifying the whole process.</p>
+ 			<p>DSC help to channel the interest of the students in all the spheres of life since it goes even beyond their prescribed syllabi. It exposes them to knowledge. It not only helps to identify the students who are talented in developing but also helps to develop a team spirit among them to build a product beneficial for the college.</p>	
+		</div>	
+		</div>		
+<script>
+function myFunction() {
+
+    if ( document.getElementById("demo").classList.contains('hide') )
+document.getElementById("demo").classList.toggle('show');
+   
+}
+function myFunction1() {
+
+    if ( document.getElementById("nst").classList.contains('nested') )
+document.getElementById("nst").classList.toggle('dtd');
+   
+}
+
+</script>
+<div id="rfg"></div>
+		<div class="box" >
+			<h3>  How we got the idea of Starting Club </h3><a href="#rfg" id="tt" onclick='myFunction2("fgt","tt");'>+</a>
+			<ol class="hide" id="fgt">
 				<li>Communication gap</li>
 				<li>Time Consuming</li>
 				<li>Learn by building projects </li>
@@ -47,7 +102,17 @@
 				<li>Lacks of Coding related events</li>
 			</ol>
 		</div>
-		<div>
+		<script type="text/javascript">
+			function myFunction2(fgt,tt) {
+    if ( document.getElementById(fgt).classList.contains('hide') ){
+document.getElementById(fgt).classList.toggle('show');
+document.getElementById(tt).innerHTML ="+";  }
+ if ( document.getElementById(fgt).classList.contains('show') )
+{
+document.getElementById(tt).innerHTML ="_";  
+}
+}</script>
+		<!--<div>
 		<h1>Quotations</h1>
 		<dl>
 				<dt>"Quotations here"</dt>
@@ -65,45 +130,57 @@
 				
 			</dl>
 		</div>
-		<div>
-			<h1>Vision</h1>
-			<ol>
+	-->
+		<div id="2" class="box">
+			<h3>Vision</h3><a href="#rfg" id="tt1" onclick="myFunction2('fgt1','tt1');">+</a>
+			<ol class="hide" id="fgt1">
 				<li>To transform the college problems with innovative solutions and services.</li>
 				<li>To be the best in class provider of integrated web technology services to the  
 				college, enabling them to stay ahead of the game in the fast changing IT 
 				world.</li>
 			</ol>
+	<div id="rfg1"></div>
 		</div>
-		<div>
-			<h1>Current Projects</h1>
-			<h2>Examination Portal</h2>
-			<p>These include an Examination Division Portal under which the corresponding 
+			
+		<div id="3" class="box">
+
+			<h3>Current Projects</h3><a href="#rfg1" id="tt2" onclick="myFunction2('fgt2','tt2');">+</a>
+			
+			<ol class="hide" id="fgt2">
+				<h3 >Examination Portal</h3> 
+				<li>These include an Examination Division Portal under which the corresponding 
 			faculties can submit their internal examination Question Papers which can be 
-			downloaded by the admin using the links provided.</p>
-			<p>Another interesting feature that we are going to implement is that of Automatic
+			downloaded by the admin using the links provided.</li>
+			<li>Another interesting feature that we are going to implement is that of Automatic
 			Debarred List Generation. The concerned faculties will be provided with a list of 
 			students highlighting the classes attended by them before the sessional which will 
 			be uploaded by the faculties. Then the Admin according to a predefined criteria will
 			input a percentage and all the students failing to fulfill this percentage will be 
-			separated out.</p>
-			<p>By logging through which they can access or view their details as sessionals 
+			separated out.</li>
+			<li>By logging through which they can access or view their details as sessionals 
 			internal marks and current attendance , syllabus for internals and study 
-			materials related to their curriculum. </p>
-			<p>Other future projects will be included as per the requirements 
-			and smooth functioning of our college.</p>
+			materials related to their curriculum. </li>
+			<li>Other future projects will be included as per the requirements 
+			and smooth functioning of our college.</li>
+		</ol>
 		</div>
-		<div>
-			<h1>Features & Facilities</h1> 
-			<h3>This club has a variety of services under its hood. Some of this 
+		<div id="4" class="box">
+			<h3>Features & Facilities</h3><a href="#rfg1" id="tt3" onclick="myFunction2('fgt3','tt3');">+</a>
+			<ol class="hide" id="fgt3">
+			 
+			<li>This club has a variety of services under its hood. Some of this 
 			include providing web development assistance to any department along 
-			with the product they require.</h3>
-			<h3>Along with Social Promotion Management, designing web banners and 
-			the necessary posters as well for the required occasions and events.</h3>
+			with the product they require.</li>
+			<li>Along with Social Promotion Management, designing web banners and 
+			the necessary posters as well for the required occasions and events.</li>
+		</ol>
+				<div id="rfg2"></div>
 		</div>
-		<div>
-			<h1>Events</h1>
-			<h2>Organising different presentation sessions & events as:</h2>
-			<ul>
+
+		<div id="6" class="box">
+			<h3>Events</h3><a href="#rfg2" id="tt4" onclick="myFunction2('fgt4','tt4');">+</a>
+			<ol class="hide" id="fgt4">
+				<h3 >Organising different presentation sessions & events as:</h3>
 				<li>Introduction to Web Development.</li>
 				<li>Starting with Front-End Development.</li>
 				<li>Building a Front-End project. E.g. Simple Profile Webpage. </li>
@@ -111,20 +188,22 @@
 				<li>Introduction to Smart editors.</li>
 				<li>How to build a small project. E.g. Login Portal & Signup Portal</li> 
 				<li>The latest and smarter tools for backend development</li>
-			</ul>	
+			</ol>	
 		</div>
-		<div>
-			<h1>Core Team</h1>
-			<ul>
-				<li>Gaurav Bhatt</li>
-				<li>Lakshaya Sarin</li>
-				<li>Mohd Shamoon</li>
-				<li>Ritik Kumar</li>
-				<li>Sohan Singh</li>
-				<li>Vyom Bangwal</li>
-			</ul>
+		<div class="Wrapper1">
+			<fieldset><legend>Core Team</legend>
+				<ul class="wrp-box">
+				<li id="li1"><h1>Gaurav Bhatt</h1></li>
+				<li id="li2"><h1>Lakshaya Sarin</h1></li>
+				<li id="li3"><h1>Mohd Shamoon</h1></li>
+				<li id="li4"><h1>Ritik Kumar</h1></li>
+				<li id="li5"><h1>Sohan Singh</h1></li>
+				<li id="li6"><h1>Vyom Bangwal</h1></li>
+				
+			</ul></fieldset>
+			
 		</div>
-		<div class="FR">
+		<div class="FR" id="5">
 			<fieldset>
 				<legend>FeedBack & Suggestions</legend>
 				<form>
@@ -132,7 +211,7 @@
 				<input type="text" id="name" />
 				<br />
 				<label for="sugg">Write here:</label>
-				<textarea id="sugg" rows="3" cols="50" >
+				<textarea id="sugg" rows="3"  >
 				</textarea>
 				</form>
 			</fieldset>
@@ -141,7 +220,8 @@
 				<a href="#" title="For Membership">Click Here</a>
 			</fieldset>
 		</div>
-		<div class="footer">
+	<div class="footer">
+		<div>
 				<ul class="nested">
 				<li><a href="#">About US</a></li>
 				<li><a href="#">Vision</a></li>
@@ -151,10 +231,37 @@
 				<li><a href="#">Core Team</a></li>
 			</ul>
 		</div>
-	
-		  <div class="footer footer1">
-                         <p>2018,Copyright &copy; Spiders , Developers Student Club</p> 
+		  <div>
+                         <p class="copy">2018,Copyright &copy; Spiders , Developers Student Club</p> 
 		 </div>
+</div>
+
+<div ><a href="#141" id="ttn" ><img class="top arrow"  src=".\resources\png\arrow.png" /></a></div>
+<script>
+// When the user scrolls down 700px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 700 ||document.documentElement.scrollTop > 700) {
+        document.getElementById("ttn").style.display = "block";	
+         document.getElementById("logo").style.display = "none";	
+        document.getElementById("1").style.height = "40px"; 
+        document.getElementById("1").style.position= "fixed";
+        document.getElementById("1").style.top= "0px";
+        document.getElementById("nst").style.margin= "0px";  
+        document.getElementById("1").style.margin="0px 0px 0px -8px";
+    
+                    } 
+            else {
+        document.getElementById("ttn").style.display = "none";
+         document.getElementById("logo").style.display = "block";	
+        document.getElementById("1").style.height = "100px";	 
+        document.getElementById("1").style.position= "absolute";
+        document.getElementById("1").style.top= "inherit";
+        document.getElementById("1").style.margin= "0px 0px 0px -8px ";
+  	 document.getElementById("11").style.margin= "100px 0px 0px 0px ";
+    } 
+}
+</script>
 </body>
-	
 </html>
