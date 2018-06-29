@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="keywords" content="Spiders,DSC,Developer Students Club,THDC-IHET,Tehri,Web Development,Coding" />
+		<meta name="description" content="This website has been designed by Spiders-Developer Students Club, CSE department THDC-IHET for the profile." />
+		<title>Spiders - DSC</title>
+		<link href=".\resources\png\logo.png" rel="icon" type="image/png" />
+		<link href=".\resources\Style\style.css" rel="stylesheet" type="text/css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function()
+			{
+	 			$("a").on('click', function(event) 
+	 			{
+			  		if (this.hash !== "") 
+			  		{
+	   	    			event.preventDefault();
+					    var hash = this.hash;
+					    $('html, body').animate(
+					    {scrollTop: $(hash).offset().top}, 1500, 
+					    function()
+					 	{
+					 		window.location.hash = hash;
+					 	});
+	    			}
+	    		});
+			});
+			function myFunction(demo,hide,show) 
+			{
+	   			 if ( document.getElementById(demo).classList.contains(hide) )
+					document.getElementById(demo).classList.toggle(show);
+			}
+			function myFunction2(fgt,tt) 
+			{
+	    		if ( document.getElementById(fgt).classList.contains('hide') )
+	    		{
+					document.getElementById(fgt).classList.toggle('show');
+					document.getElementById(tt).innerHTML ="+";  
+				}
+				if ( document.getElementById(fgt).classList.contains('show') )
+				{
+					document.getElementById(tt).innerHTML ="_";  
+				}
+			}
+			function myFunction3(fgt,tt,HH) 
+			{
+	    		if ( document.getElementById(fgt).classList.contains('hide') )
+	    		{
+					document.getElementById(fgt).classList.toggle('show');
+					document.getElementById(HH).classList.toggle('show');
+					document.getElementById(tt).innerHTML ="+";  
+				}
+				if ( document.getElementById(fgt).classList.contains('show') )
+				{
+					document.getElementById(tt).innerHTML ="_";  
+				}
+			}
+			window.onscroll = function() {scrollFunction()};
+			function scrollFunction() 
+			{
+				if (document.body.scrollTop > 700 ||document.documentElement.scrollTop > 700) 
+				{
+					document.getElementById("A6").style.display = "block";	
+	        		document.getElementById("logo").style.display = "none";	
+	        		document.getElementById("D2").style.height = "40px"; 
+	       		 	document.getElementById("D2").style.position= "fixed";
+	        		document.getElementById("D2").style.top= "0px";
+	        		document.getElementById("UL1").style.margin= "0px";  
+	        		document.getElementById("D2").style.margin="0px 0px 0px -8px";
+	            } 
+	            else 
+	            {
+	            	document.getElementById("A6").style.display = "none";
+	         		document.getElementById("logo").style.display = "block";	
+	        		document.getElementById("D2").style.height = "100px";	 
+	        		document.getElementById("D2").style.position= "absolute";
+	        		document.getElementById("D2").style.top= "inherit";
+	        		document.getElementById("D2").style.margin= "0px 0px 0px -8px ";
+	  	 			document.getElementById("D3").style.margin= "100px 0px 0px 0px ";
+	  	 		} 
+			}
+		</script>
+	</head>
+	<body onload="document.getElementById('A6').style.display = 'none';">
+		<div class="container">
+			<h1>Hi, We are <span class="focus">Spiders</span></h1>
+			<h4><span class="focus">D</span>evelopers <span class="focus">S</span>tudent <span class="focus">C</span>lub</h4>
+			<h6>Design &amp; Build Web Applications</h6>
+			<a href="#D1"><img class="arrow" src=".\resources\png\arrow.png" /></a>
+		</div>
+		<div id="D1"></div>
+		<div class="header" id="D2">
+			<a href="#" title="Developers Student Club"><img class="logo" id="logo" src=".\resources\png\full_logo.png" /></a>
+			<div class="nav-btn">
+				<span class="out">
+					<a class="nb" href="#D2" onclick="myFunction('UL1','nested','dtd')">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+				</span>
+			</div>
+			<ul class="nested" id="UL1">
+				<li><a href="#D10" onclick="myFunction('D4','hide','show');">About US</a></li>
+				<li><a href="#D5" onclick="myFunction2('OL2','A2');">Vision</a></li>
+				<li><a href="#D6" onclick="myFunction3('OL3','A3','HH1');">Projects</a></li>
+				<li><a href="#D6"  onclick="myFunction2('OL4','A4');">Features</a></li>
+				<li><a href="#D9">Interact</a></li>
+				<li><a href="#D9">Register</a></li>
+				<li><a href="#D7" onclick="myFunction3('OL5','A5','HH2');">Events</a></li>
+			</ul>
+		</div>
+		<div class="Wrapper" id="D3">
+			<a class="read" href="#D10" onclick="myFunction('D4','hide','show')">Read more</a>
+		</div>
+		<div class="temp" id="D10"></div>
+		<div class="hide" id="D4">
+			<div class="readdd">
+				<h4><span class="focus">D</span>evelopers <span class="focus">S</span>tudent <span class="focus">C</span>lub</h4>
+				<p>There is no denying the immense importance of student clubs in any engineering college. They complement the college with their own unique and specific purpose. Hence, we strongly feel the need of one such club in our college. We established a Developer Student Club which basically aims to serve as a platform for our skilled developers to bring forward their skills and ideas and use them for the betterment of our college by developing specific products for the ease of access and simplifying the whole process.</p>
+				<p>DSC help to channel the interest of the students in all the spheres of life since it goes even beyond their prescribed syllabi. It exposes them to knowledge. It not only helps to identify the students who are talented in developing but also helps to develop a team spirit among them to build a product beneficial for the college.</p>
+			</div>
+		</div>
+		<div id="D5"></div>
+		<div class="back">
+		<div class="box">
+			<h3>How we got the idea of Starting Club</h3>
+			<a href="#D5" id="A1" onclick="myFunction2('OL1','A1');">+</a>
+			<ol class="hide" id="OL1">
+				<li>Communication gap</li>
+				<li>Time Consuming</li>
+				<li>Learn by building projects</li>
+				<li>Platform to showcase my skills (missing)</li>
+				<li>Difficulty in manage Attendance</li>
+				<li>Difficulty in accessing marks</li>
+				<li>Lacks of Coding related events</li>
+			</ol>
+		</div>
+	<!--<div>
+			<h1>Quotations</h1>
+			<dl>
+				<dt>"Quotations here"</dt>
+				<dd><b>by-NAME</b></dd>
+				<dt>"Quotations here"</dt>
+				<dd><b>by-NAME</b></dd>
+				<dt>"Quotations here"</dt>
+				<dd><b>by-NAME</b></dd>
+				<dt>"Quotations here"</dt>
+				<dd><b>by-NAME</b></dd>
+				<dt>"Quotations here"</dt>
+				<dd><b>by-NAME</b></dd>
+				<dt>"Quotations here"</dt>
+				<dd><b>by-NAME</b></dd>
+			</dl>
+		</div>-->
+		<div class="box" >
+			<h3>Vision</h3>
+			<a href="#D5" id="A2" onclick="myFunction2('OL2','A2');">+</a>	
+			<ol class="hide" id="OL2">
+				<li>To transform the college problems with innovative solutions and services.</li>
+				<li>To be the best in class provider of integrated web technology services to the college, enabling them to stay ahead of the game in the fast changing IT world.</li>
+			</ol>
+			<div id="D6"></div>
+		</div>
+		<div class="box" >
+			<h3>Current Projects</h3>
+			<a href="#D6" id="A3" onclick="myFunction3('OL3','A3','HH1');">+</a>
+			<h3 class="hide" id="HH1">Examination Portal</h3><br/>
+			<ol class="hide" id="OL3">
+				<li>These include an Examination Division Portal under which the corresponding faculties can submit their internal examination Question Papers which can be downloaded by the admin using the links provided.</li>
+				<li>Another interesting feature that we are going to implement is that of Automatic Debarred List Generation. The concerned faculties will be provided with a list of students highlighting the classes attended by them before the sessional which will be uploaded by the faculties. Then the Admin according to a predefined criteria will input a percentage and all the students failing to fulfill this percentage will be separated out.</li>
+				<li>By logging through which they can access or view their details as sessionals internal marks and current attendance , syllabus for internals and study materials related to their curriculum.</li>
+				<li>Other future projects will be included as per the requirements and smooth functioning of our college.</li>
+			</ol>
+		</div>
+		<div class="box" >
+			<h3>Features &amp; Facilities</h3>
+			<a href="#D6" id="A4" onclick="myFunction2('OL4','A4');">+</a>	
+			<ol class="hide" id="OL4">
+				<li>This club has a variety of services under its hood. Some of this include providing web development assistance to any department along with the product they require.</li>
+				<li>Along with Social Promotion Management, designing web banners and the necessary posters as well for the required occasions and events.</li>
+			</ol>
+			<div id="D7"></div>
+		</div>
+		<div class="box" >
+			<h3>Events</h3>
+			<a href="#D7" id="A5" onclick="myFunction3('OL5','A5','HH2');">+</a>
+			<h3 class="hide" id="HH2">Organising different presentation sessions &amp; events as:</h3><span></span>
+			<ol class="hide" id="OL5">
+				<li>Introduction to Web Development.</li>	
+				<li>Starting with Front-End Development.</li>
+				<li>Building a Front-End project. E.g. Simple Profile Webpage.</li>
+				<li>Introduction to Backend and how to setup Backend environment.</li>
+				<li>Introduction to Smart editors.</li>
+				<li>How to build a small project. E.g. Login Portal &amp; Signup Portal</li>
+				<li>The latest and smarter tools for backend development</li>
+			</ol>
+			<div id="D8"></div>
+		</div></div>
+		<div class="Wrapper1">
+			<fieldset>
+				<legend><span class="focus">C</span>ore <span class="focus">T</span>eam</legend>
+				<ul class="wrp-box">
+					<li id="li1"><h1>Gaurav Bhatt</h1></li>
+					<li id="li2"><h1>Lakshaya Sarin</h1></li>
+					<li id="li3"><h1>Mohd Shamoon</h1></li>
+					<li id="li4"><h1>Ritik Kumar</h1></li>
+					<li id="li5"><h1>Sohan Singh</h1></li>
+					<li id="li6"><h1>Vyom Bangwal</h1></li>
+				</ul>
+			</fieldset>
+		</div>
+		<div class="FR" id="D9">
+			<fieldset>
+				<legend>FeedBack &amp; Suggestions</legend> 
+			 		<form>
+					<div class="FR1">				
+					<textarea id="sugg" rows="4" cols="40" placeholder="Feedback & Suggestions here..."></textarea>
+					<div class="FF" >
+						<input type="submit" value="Submit" onclick="" />
+					<input type="reset" value="  Clear "/>
+					</div>
+					</div>
+					</form>
+			</fieldset>
+			<fieldset>
+				<legend>Registration For Membership</legend>
+				<a class="bttn" href="https://docs.google.com/forms/d/e/1FAIpQLSegoiVhNV0LW1WXePS2hiGGtUfdHKqEgSir025M5DKuhDJj3Q/viewform?usp=sf_link" title="For Membership">Click Me </a>
+			</fieldset>
+		</div>
+		<div class="footer">
+			<ul class="nested">
+				<li><a  href="#D10" onclick="myFunction('D4','hide','show');">About US</a></li>
+				<li><a href="#D5" onclick="myFunction2('OL2','A2');">Vision</a></li>
+				<li><a href="#D6" onclick="myFunction3('OL3','A3','HH1');">Projects</a></li>
+				<li><a href="#D6"  onclick="myFunction2('OL4','A4');">Features</a></li>
+				<li><a href="#D7" onclick="myFunction3('OL5','A5','HH2');">Events</a></li>
+				<li><a href="#D8">Core Team</a></li>
+			</ul>
+			<p class="copy">2018,Copyright &copy; Spiders , Developers Student Club</p>
+		</div>
+		<div><a href="#D1" id="A6" title="Go To Top"><img class="top arrow" src=".\resources\png\arrow.png"  alt="Go To Top"/></a></div>
+	</body>
+</html>
