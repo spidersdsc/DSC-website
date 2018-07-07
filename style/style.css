@@ -1,0 +1,257 @@
+html {
+    scroll-behavior: smooth;
+    scroll-behavior: 
+}
+
+.main{
+	background: url(../images/img2.jpg) repeat;
+	width: 100%;
+	padding-bottom: 100px;
+}
+
+body{
+	margin: 0px;
+	padding: 0px;
+	line-height: 1.3 !important;
+}
+
+.head{
+	color: white;
+	text-align: center;
+
+}
+
+.heading{
+	margin: 0px;
+	padding: 0px;
+	
+	padding-top: 30px;
+	font-family: 'IM Fell English SC', serif;
+	font-size: 15em;
+}
+
+
+#sub
+{
+	font-family: 'IM Fell English SC', serif;
+	font-size: 6em;
+
+}
+
+.arrbo{
+	margin-top: 30px;
+	border: white solid 5px;
+	border-radius: 50%;
+	padding: 10px;
+	
+}
+
+
+#arr{
+	
+	color: white !important;
+	text-decoration: none;
+}
+
+.arrbo:hover{
+	background-color: #1264e8;
+	border-color: #1264e8;
+  transition: 1s ease-out;
+}
+
+
+
+
+
+
+.fade{
+	  animation-name: fade;
+	  opacity: 0;
+	    animation-duration: 1.5s;
+	    animation-fill-mode: both;
+
+
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+		transform: translate3d(0,60px,0);
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+		transform: none;
+	}
+}
+
+
+ul{
+	list-style-type: disc;
+	padding: 0px;
+}
+
+li{
+	display: inline;
+}
+
+.menu-1{
+	width: 100%;
+
+}
+
+
+a{
+	text-decoration: none ;
+	color:white ;
+	display: inline-block;
+	font-family: 'Roboto Slab', serif;
+}
+
+.spi_list > li
+{
+	padding-left: 20px;
+
+}
+
+#about{
+	
+	display: block;
+
+
+}
+
+
+
+
+.spi_list > li> a:hover
+{
+	color:red ;
+text-decoration:none;
+transform: scale(1.5,1.5);
+transition: 0.5s ease-out;
+
+
+
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+#navbar {
+
+  overflow: hidden;
+  background-color: black;
+  text-align: center;
+  width: 100%;
+  	z-index: 1000;
+}
+
+#navbar  {
+
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  padding-top: 30px;
+  font-size: 17px;
+}
+
+
+
+#team_body{
+	background: url(../images/pattern.jpg);
+	width: 100%;
+	
+	padding-top: 80px;
+	color: white;
+	text-align: center;
+	padding-bottom: 100px;
+}
+
+
+.block{
+	background-color: rgba(255,255,255,0.6);
+	height: 200px;
+	border-radius: 10px;
+
+}
+
+
+.hea{
+	background-color: #1264e8;
+	min-height: 50px;
+
+}
+
+.para{
+	padding: 10px;
+	font-family: 'Roboto Slab', serif;
+	color: black;
+}
+
+h1{
+	font-family: 'Roboto Slab', serif;
+}
+
+
+
+
+
+.wrap{
+	
+	overflow: none;
+}
+
+
+.project_body{
+
+	background: url(../images/preview.jpg);
+	height: 600px;
+	width: 100%;
+}
+
+#projects{
+
+	padding: 60px;
+
+}
+
+
+.logo-small {
+    color: green;
+    font-size: 50px;
+}
+
+.logo {
+    color: red;
+    font-size: 200px;
+}
+
+#features{
+	padding:30px;
+}
+
+ .bg-grey {
+      background-color: #f6f6f6;
+
+      }
+
+      .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
